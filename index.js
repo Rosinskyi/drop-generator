@@ -1,4 +1,5 @@
 import Drop from "./drop.js";
+import data from "./data.js"
 let i = 0;
 let drop = new Drop();
 const reset = document.querySelector("#reset");
@@ -15,7 +16,7 @@ btn.addEventListener("click", () => {
     added.innerHTML = "added " + i;
 });
 result.addEventListener("click", () => {
-    drop.get_result();
+    drop.get_result(data);
     final.innerHTML = drop.drop_group;
 });
 reset.addEventListener("click", () => {
