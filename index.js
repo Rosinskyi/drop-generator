@@ -1,6 +1,7 @@
 import Drop from "./drop.js";
 
 let drop = new Drop();
+const reset = document.querySelector("#reset");
 const final = document.querySelector("#final");
 const added = document.querySelector("#overview");
 const id = document.querySelector("#id");
@@ -16,3 +17,6 @@ result.addEventListener("click", () => {
     drop.get_result();
     final.innerHTML = drop.drop_group;
 });
+reset.addEventListener("click", () => {
+    window.location.reload();
+})
