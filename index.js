@@ -1,5 +1,5 @@
 import Drop from "./drop.js";
-
+let i = 0;
 let drop = new Drop();
 const reset = document.querySelector("#reset");
 const final = document.querySelector("#final");
@@ -11,7 +11,8 @@ const result = document.querySelector("#result");
 const count = document.querySelector("#count");
 btn.addEventListener("click", () => {
     drop.add_item(id.value, count.value, chance.value);
-    added.innerHTML = "added";
+    i++;
+    added.innerHTML = "added " + i;
 });
 result.addEventListener("click", () => {
     drop.get_result();
@@ -19,4 +20,4 @@ result.addEventListener("click", () => {
 });
 reset.addEventListener("click", () => {
     window.location.reload();
-})
+});
