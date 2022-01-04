@@ -21701,7 +21701,7 @@ class Drop {
     }
 
     add_item(item, count, chance) {
-        this.items.push([item.trim(), count.trim(), chance.trim()]);
+        this.items.push([item.trim().replace(",","."), count.trim(), chance.trim().replace(",",".")]);
     }
     get_result() {
         this.items.forEach((item) => (this.group_chance += Number(item[2])));
