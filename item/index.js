@@ -11,6 +11,7 @@ const final = document.querySelector(".final");
 let items_group = "";
 let items = [];
 let sum = 0;
+let counter = 0;
 function addItem(id, amount, chance) {
     items.push([
         id.trim().replace(",", "."),
@@ -22,16 +23,19 @@ function get_result(data) {
     items.forEach((item, index) => {
         items_group +=
             "{{{" + `${data[item[0]]};${item[1]}}};${item[2]}` + "};";
-        sum += item[2];
-        if(sum>100){
-            document.body.append("chance > 100%")
-        }
+        sum += Number(item[2]);
+        
     });
+    if (sum > 100) {
+        console.log(sum);
+        document.body.append("chance > 100%");
+    }
 }
 
 add.addEventListener("click", () => {
     addItem(id.value, amount.value, chance.value);
-    console.log(items);
+    counter++;
+    add.innerHTML = `add - ${counter}`;
 });
 result.addEventListener("click", () => {
     get_result(data);
