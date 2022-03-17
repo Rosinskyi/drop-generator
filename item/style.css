@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    max-width: 300px;
+    width: 100%;
+    margin: 300px auto;
+}
+.wrapper button {
+    width: 50px;
+    height: 25px;
+    margin: 10px;
+}
+.reset {
+    background-color: red;
+    color: black;
+}
+.final {
+    display: none;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 50px;
+}
